@@ -27,3 +27,4 @@ res.json({ message: "User created successfully" });
         res.status(500).json({ message: "Server error", error});
     }   
 }; 
+
