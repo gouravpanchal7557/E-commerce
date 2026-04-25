@@ -40,13 +40,14 @@ export default function Signup() {
              onChange={handleChange}
               className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           required />
-
+   
           <input name='email'
           type="email"
              placeholder=" Enter Email"
              value={form.email}
              onChange={handleChange}
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className=
+              "w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           required />
 
           <input name='password'
