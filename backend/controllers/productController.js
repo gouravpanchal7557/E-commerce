@@ -18,7 +18,19 @@ res.json({ message: "Product created successfully",
 // get all products
 export const getProducts = async (req, res) => {
     try{
-const products = await product.find().sort({ createdAt: -1 });
+        const {search, category} = req.query;
+        let filter = {};
+        if(search)
+            {
+                filter.title = { $regex: search, $options: "i" };
+            }
+            if(category)
+            {
+                filter.category = category;
+            }
+ 
+
+const products = await product.find(filter).sort({ createdAt: -1 });
 res.json(products);
     }
 catch(error){
